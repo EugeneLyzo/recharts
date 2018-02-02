@@ -275,7 +275,7 @@ class Line extends Component {
         ...lineProps,
         ...customDotProps,
         ...dotEvents,
-        value: entry.value,
+        value: entry.value < 10 ? `${entry.value} ` : entry.value,
         dataKey,
         cx: entry.x, cy: entry.y, index: i, payload: entry.payload,
       };
